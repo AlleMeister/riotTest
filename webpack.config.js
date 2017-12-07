@@ -2,14 +2,18 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './app/main.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/public/',
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.ProvidePlugin({
+      RiotControl: 'riotcontrol',
+      route: 'riot-route',
+      riot: 'riot'
+    }),
   ],
   module: {
     loaders: [
@@ -27,7 +31,22 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'css-loader'
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loader: 'sass-loader'
       }
+    ]
+  },
+  resolve: {
+    root: [
+      path.resolve('./src')
     ]
   }
 }
