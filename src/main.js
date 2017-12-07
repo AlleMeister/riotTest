@@ -4,9 +4,9 @@ import 'riot-route'
 import 'riotcontrol'
 import './app.tag'
 
-route((tag, id, action) => {
-    console.log(tag)
-})
+/*route((tag, id, action) => {
+   console.log(tag)
+})*/
 
 riot.mount('app')
 

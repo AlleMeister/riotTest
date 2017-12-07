@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -16,6 +17,12 @@ module.exports = {
     }),
   ],
   module: {
+    /*rules: [{
+      include:[
+          path.resolve(__dirname, "./src"),
+          'node_modules'
+        ]
+        }],*/
     loaders: [
       {
         test: /\.tag$/,
@@ -45,8 +52,10 @@ module.exports = {
     ]
   },
   resolve: {
-    root: [
-      path.resolve('./src')
+    modules: [ 
+     path.resolve(__dirname, "./src"),
+     path.resolve(__dirname, "node_modules")
     ]
   }
-}
+  }
+
