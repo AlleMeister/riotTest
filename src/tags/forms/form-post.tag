@@ -1,11 +1,16 @@
 <form-post>
 <div>
- <form style="background-color:green" onsubmit={ addpost }>
+ <form onsubmit={ addpost }>
+    <h2>Create post</h2>
+    <div>
     <label for="title">Title:</label>
     <input name="titel" ref="title" type="text"></input>
+    </div>
+    <div>
     <label for="body">Body:</label>
     <input name="body" ref="body" type="text"></input>
-    <input type="submit" value="submit"></input>
+    </div>
+    <button type="submit">Submit</button>
  </form>
 
 

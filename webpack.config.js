@@ -49,6 +49,7 @@ module.exports = {
     }],
   },
   resolve: {
+    extensions: ['.js', '.tag', '.scss'],
     modules: [
       path.resolve(__dirname, "./src"),
       path.resolve(__dirname, "node_modules")

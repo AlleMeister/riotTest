@@ -1,3 +1,87 @@
-h1{
-    color: green;
+$rgbRed: rgb(133, 14, 14);
+$rgbGreen: rgb(133, 202, 124);
+$rgbPink: rgb(226, 87, 215);
+$rgborange: rgb(255, 136, 0);
+$rgbBlack: rgb(0, 0, 0);
+
+home-page {
+    h1 {
+        color: $rgbRed;
+        text-align: center;
+    }
+    button.green {
+        background-color: $rgbGreen;
+        border-radius: 25px;
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+    #userinput {
+        right: 50%;
+        left: 45%;
+        position: absolute;
+        width: 150px;
+    }
+    ul {
+        margin: 0px;
+    }
+
+    #newpostParent {
+        margin-top: 10px; 
+        margin-left: 25px;
+    }
+    form-post {
+        form {
+            width: 20rem;
+            margin-top: 10px;
+
+            label {
+                display: inline-block;
+                min-width: 4rem;
+                text-align: right;
+            }
+
+            button {
+                margin-left: 4.25rem;
+            }
+            h2 {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+    }
+    list-page {
+
+        display: flex;
+        justify-content: space-around;
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            //justify-content: space-around;
+        }
+
+        #postParent {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-style: solid;
+            border-bottom-color: $rgbBlack;
+            border-radius: 25px;
+                h1 {
+                    text-align: center;
+                }
+        }
+
+        #albumParent {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-style: solid;
+            border-bottom-color: $rgbBlack;
+            border-radius: 25px;
+            h1 {
+                text-align: center;
+            }
+        }
+    }
 }
