@@ -17,45 +17,42 @@ module.exports = {
     }),
   ],
   module: {
-    /*rules: [{
-      include:[
-          path.resolve(__dirname, "./src"),
-          'node_modules'
-        ]
-        }],*/
-    loaders: [
-      {
-        test: /\.tag$/,
-        exclude: /node_modules/,
-        loader: 'riot-tag-loader',
-        query: {
+    rules: [{
+      test: /\.scss$/,
+      use: [{
+        loader: "style-loader"
+      }, {
+        loader: "css-loader"
+      }, {
+        loader: "sass-loader",
+        options: {
+          includePaths: ["absolute/path/a", "absolute/path/b"]
+        }
+      }]
+    }, {
+      test: /\.tag$/,
+      use: [{
+        loader: "riot-tag-loader",
+        options: {
           type: 'es6', // transpile the riot tags using babel
           hot: true,
           debug: true
         }
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        loader: 'css-loader'
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        loader: 'sass-loader'
-      }
-    ]
+      }]
+
+    }, {
+      test: /\.js$/,
+      use: [{
+        loader: "babel-loader",
+      }]
+
+    }],
   },
   resolve: {
-    modules: [ 
-     path.resolve(__dirname, "./src"),
-     path.resolve(__dirname, "node_modules")
+    modules: [
+      path.resolve(__dirname, "./src"),
+      path.resolve(__dirname, "node_modules")
     ]
   }
-  }
+}
 

@@ -6,15 +6,17 @@
 
    <button onclick={ gopremium }>Everything is gone</button>
 
-    <list-page if={ ispremium == done }></list-page>
+    <list-page if={ show }></list-page>
     
 </div>
 
     <script>
         import 'tags/pages/list-page/list-page.tag'
-        import './style.css'
+        import './style.scss'
         RiotControl.addStore(this)
-        this.user = ''
+        this.user = '';
+        this.show = true;
+
 
         this.send = (e) => {
             let username = this.refs.userinput.value
@@ -26,7 +28,7 @@
         });
             
         this.gopremium = (e) => {
-            this.update({ispremium: 'done'})
+            this.show = !this.show;
         };
 
     </script>
