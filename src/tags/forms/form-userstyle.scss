@@ -1,0 +1,37 @@
+@import 'colors';
+
+form-user{
+
+    &>div{
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+
+        h2{
+            text-align: center;
+        }
+    }
+    form{
+        background-color: $rgbWhite;
+        width: 600px;
+
+        input{
+            display: block;
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-bottom: 5px;
+            padding: 10px;
+            width: 300px;
+        }
+        label{
+            margin-left: 25%;
+        }
+        button{
+            background-color: $rgbGreen;
+            padding: 16px 32px;
+            color: $rgbWhite;
+            width: 100%;
+            //margin-bottom: 5px;
+        }
+    }
+}

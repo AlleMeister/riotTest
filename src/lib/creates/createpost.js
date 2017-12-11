@@ -8,14 +8,16 @@ const url = 'https://jsonplaceholder.typicode.com/posts';
 
 this.on('create-post', (formdata) => {
 
+let obj = {
+  userId: 1,
+  id: '',
+  title: formdata.titleinput,
+  body: formdata.bodyinput
+  }
+
 fetch(url, {
 method: 'POST',
-body: JSON.stringify({
-userId: 1,
-id: '',
-title: formdata.titleinput,
-body: formdata.bodyinput
-}),
+body: JSON.stringify(obj),
 headers: {
   "Content-type": "application/json; charset=UTF-8"
 }

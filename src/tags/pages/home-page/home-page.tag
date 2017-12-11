@@ -4,7 +4,7 @@
     
    <input oninput={ send } id="userinput" ref="userinput" type="text"></input>
 
-   <button class="green" onclick={ gopremium }>Hide Lists</button>
+   <button class="hideBTN" onclick={ gopremium }>Hide Lists</button>
 
     <list-page if={ show }></list-page>
 

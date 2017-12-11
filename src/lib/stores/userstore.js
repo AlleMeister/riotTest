@@ -1,15 +1,15 @@
-const PostStore = (() => {
+const UserStore = (() => {
     RiotControl.addStore(this);
     riot.observable(this);
-    const url = 'https://jsonplaceholder.typicode.com/posts';
+    const url = 'https://jsonplaceholder.typicode.com/users';
 
-    this.on('fetch-postdata', () => {
+    this.on('fetchalbum-user', (userId) => {
 
-    fetch(url)
+    fetch(url + '/' + userId)
     .then((resp) => resp.json())
     .then(function(data) {
       //console.log(data);
-      RiotControl.trigger('fetched-postdata', data);
+      RiotControl.trigger('fetchedalbum-user', data);
   
     })
     .catch(function(error) {
@@ -17,15 +17,13 @@ const PostStore = (() => {
     });
     });
 
-    this.on('fetch-clickedpost', (id) => {
-      
-          fetch(url + '?id=' + id)
+    this.on('fetch-user', () => {
+  
+          fetch(url + '/' + 1)
           .then((resp) => resp.json())
           .then(function(data) {
             //console.log(data);
-
-            const postData = data.length === 1 ? data[0] : {}
-            RiotControl.trigger('fetched-clickedpostdata', postData);
+            RiotControl.trigger('fetched-user', data);
         
           })
           .catch(function(error) {
@@ -33,7 +31,4 @@ const PostStore = (() => {
           });
           });
 
-    /*this.on('*', (payload) => {
-        console.log(payload);
-    })*/
 })();

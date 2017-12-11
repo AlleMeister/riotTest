@@ -4,7 +4,7 @@
     <h2>Create post</h2>
     <div>
     <label for="title">Title:</label>
-    <input name="titel" ref="title" type="text"></input>
+    <input name="title" ref="title" type="text"></input>
     </div>
     <div>
     <label for="body">Body:</label>

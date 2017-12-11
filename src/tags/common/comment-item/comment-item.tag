@@ -1,9 +1,6 @@
 <comment-item>
 <div>
-<div class="commentSect">
-Id: {item.id} <br/> Name: {item.name} <br/> Email: {item.email} <br/> <br/> Body: {item.body}
-</div>
-
+    Id: {item.id} <br/> Name: {item.name} <br/> Email: {item.email} <br/> <br/> Body: {item.body}
 </div>
 
 <script>

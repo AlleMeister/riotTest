@@ -1,15 +1,13 @@
 @import 'colors';
 
-comment-item {
+div.headSect{
     display: flex;
     justify-content: center;
-    &>div{
 
+    &>div {
         padding: 10px;
-        margin: 20px;
-        width: 800px;
         border-style: solid;
         border-color: $rgbBlack;
-        border-radius: 25px;
+        margin-bottom: 10px;
     }
 }
