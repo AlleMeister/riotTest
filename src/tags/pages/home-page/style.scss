@@ -14,7 +14,7 @@ home-page {
         color: $rgbRed;
         text-align: center;
     }
-    button.hideBTN {
+    button.BTN {
         border-radius: 25px;
         display: block;
         width: 50px;
@@ -22,8 +22,7 @@ home-page {
     }
     
     #userinput {
-        right: 45%;
-        left: 44%;
+        left: 4%;
         position: absolute;
         width: 200px;
         padding: 10px;
