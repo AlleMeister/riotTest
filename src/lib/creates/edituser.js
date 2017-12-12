@@ -42,6 +42,7 @@ const EditUser = (() => {
     .then((resp) => resp.json())
     .then(function(data) {
     console.log(data);
+    alert('User update success!')
     RiotControl.trigger('post-response', data);
     
     })

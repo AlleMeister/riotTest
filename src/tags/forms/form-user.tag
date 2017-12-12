@@ -75,6 +75,7 @@ this.user = {};
             //console.log(data);
             this.user= data;
             this.update();
+            
         });
 
 this.edituser = (e) => {
@@ -96,7 +97,6 @@ this.edituser = (e) => {
             catchphraseinput: this.refs.catchphrase.value,
             bsinput: this.refs.bs.value
         }
-    console.log(obj);
         RiotControl.trigger('edit-user', obj);
 }
 
