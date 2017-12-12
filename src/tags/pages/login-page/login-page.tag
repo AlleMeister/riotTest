@@ -22,6 +22,7 @@
 import route from 'riot-route'
 import './loginstyle'
 this.validate = (e) => {
+    e.preventDefault();
     if (this.refs.logusername.value === 'admin' && this.refs.logpassword.value === 'password') {
         route('/home/');
     }else {
