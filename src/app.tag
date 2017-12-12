@@ -1,7 +1,7 @@
 <app>
     <div id="contentPages">
         <router>
-            <route path="/"><home-page /></route>
+            <route path="/"><login-page /></route>
             <route path="home"><home-page /></route>
             <route path="comment/*"><comment-page /></route>
             <route path="album/*"><album-page /></route>
@@ -14,6 +14,7 @@
         import 'tags/pages/comment-page/comment-page'
         import 'tags/pages/album-page/album-page'
         import 'tags/pages/user-page/user-page'
+        import 'tags/pages/login-page/login-page'
         import 'lib/stores/albumstore'
         import 'lib/stores/poststore'
         import 'lib/stores/commentstore'
