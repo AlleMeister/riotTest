@@ -1,0 +1,44 @@
+@import 'colors';
+
+ form-post{
+
+     &>div{
+        display: flex;
+        justify-content: center;
+
+          h2{
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+   form {
+        background-color: $rgbWhite;
+        //margin-bottom: 10px;
+        width: 300px;
+        margin: 10px;
+
+        input{
+            padding: 10px;
+            margin-left: 18%;
+            margin-bottom: 5px;
+        }
+
+        label{
+            display: block;
+            margin-left: 18%;
+        }
+
+        button {
+            //@include button-style();
+            margin-bottom: 10px;
+            margin-left: 18%;
+            background-color: $rgbGreen;
+            color: $rgbWhite;
+            padding: 10px 32px;
+        }
+        
+    }
+
+}

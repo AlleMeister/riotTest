@@ -20,6 +20,7 @@
         import 'lib/stores/photostore'
         import 'lib/stores/userstore'
         import 'lib/creates/createpost'
+        import 'lib/creates/createcomment'
         import 'lib/creates/edituser'
         import route from 'riot-route/lib/tag'
         import './mainstyle'

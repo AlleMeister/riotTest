@@ -1,13 +1,80 @@
 @import 'colors';
 
 comment-page {
+
+    &>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    comment-item {
+        display: flex;
+        justify-content: center;
+        
+        &>div{
+            padding: 10px;
+            margin: 10px;
+            width: 800px;
+            border-style: solid;
+            border-color: $rgbBlack;
+            border-radius: 25px;
+        }
+    }
+
     h1 {
         text-align: center;
         color: $rgbRed;
     }
-    span {
-        display: block;
-        margin-left: 20px;
+
+    #newcommentsParent{
+        display: flex;
+        justify-content: center;
+        
+        &>div {
+            padding: 10px;
+            margin: 10px;
+            width: 800px;
+            border-style: solid;
+            border-color: $rgbBlack;
+            border-radius: 25px;
+        }
     }
 
+    #createCommentDiv {
+
+        display: flex;
+        justify-content: center;
+
+        form-comment {
+
+            background-color: $rgbWhite;
+            //margin-bottom: 10px;
+            width: 300px;
+            margin: 10px;
+
+            input{
+                padding: 10px;
+                margin-left: 18%;
+                margin-bottom: 5px;
+            }
+
+            label{
+                display: block;
+                margin-left: 18%;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            button {
+                //@include button-style();
+                margin-bottom: 10px;
+                margin-left: 18%;
+                background-color: $rgbGreen;
+                color: $rgbWhite;
+                padding: 10px 32px;
+            } 
+        }
+    }
 }

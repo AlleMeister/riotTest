@@ -8,11 +8,13 @@
 
     <list-page if={ show }></list-page>
 
-    <div id="newpostParent">
-        <span newpost={ newposts }>Userid: {newposts.userId} Title: {newposts.title} Body: {newposts.body}</span>
+    <div id="newpostParent" if={newposts}>
+    <div newpost={ newposts }>
+        Title: {newposts.title} </br> Body: {newposts.body}
+    </div>
     </div>
 
-    <form-post ></form-post>
+    <form-post></form-post>
     
 </div>
     <script>
@@ -22,7 +24,7 @@
         RiotControl.addStore(this)
         this.user = '';
         this.show = true;
-        this.newposts = [];
+        this.newposts = null;
 
 
         this.send = (e) => {

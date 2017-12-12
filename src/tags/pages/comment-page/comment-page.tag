@@ -4,19 +4,27 @@
         <div>
             <posthead-item item={post}></posthead-item>
         </div>
-        <div id="commentParent">
-            <h1>Comment section</h1> 
-            <comment-item each={comment in comments} item={comment}></comment-item>
-        <div>            
+        <h1>Comment section</h1> 
+        <comment-item each={comment in comments} item={comment}></comment-item>
+        <div id="newcommentsParent" if={newcomments}>
+            <div newcomment={newcomments}>
+                Id: {newcomments.id} </br> Name: {newcomments.name} </br> Email:{newcomments.email} </br> </br> Body: {newcomments.body}
+            </div>
+        </div>
+        <div id="createCommentDiv">
+            <form-comment></form-comment> 
+        </div>
     </div>
 
     <script>
         import './commentstyle'
         import 'tags/common/comment-item/comment-item'
         import 'tags/common/head-item/posthead-item'
+        import 'tags/forms/form-comment'
         RiotControl.addStore(this);
         this.comments = [];
         this.post = [];
+        this.newcomments = null;
         
         this.id = null;
 
@@ -39,6 +47,11 @@
         this.on('fetched-clickedpostdata', (data) => {
             console.log(data);
             this.post = data;
+            this.update();
+        });
+
+        this.on('comment-response', (data) => {
+            this.newcomments = data;
             this.update();
         });
          

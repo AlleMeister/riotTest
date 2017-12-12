@@ -1,6 +1,7 @@
 <form-post>
 <div>
  <form onsubmit={ addpost }>
+ <div>
     <h2>Create post</h2>
     <div>
     <label for="title">Title:</label>
@@ -11,13 +12,14 @@
     <input name="body" ref="body" type="text"></input>
     </div>
     <button type="submit">Submit</button>
+</div>
  </form>
 
 
 </div>
 
 <script>
-
+import './form-poststyle' 
     this.addpost = (e) => {
         e.preventDefault();
         //console.log()

@@ -4,7 +4,6 @@
 </div>
 
 <script>
-  import './comment-itemstyle'
   this.item = this.opts.item;
   //console.log(this.item);
 
