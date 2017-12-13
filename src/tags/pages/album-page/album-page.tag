@@ -39,7 +39,7 @@
     })
 
    this.on('fetchedalbum-user', (data) => {
-        console.log(data);
+        //console.log(data);
         this.useralbum = data;
         this.update();
         });
