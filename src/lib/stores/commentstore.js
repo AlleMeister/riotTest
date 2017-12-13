@@ -10,7 +10,7 @@ const CommentStore = (() => {
     fetch(url + '?postId=' + id)
     .then((resp) => resp.json())
     .then(function(data) {
-      console.log(data);
+      //console.log(data);
       RiotControl.trigger('fetched-comments', data);
         
     })

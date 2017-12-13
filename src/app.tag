@@ -6,6 +6,7 @@
             <route path="comment/*"><comment-page /></route>
             <route path="album/*"><album-page /></route>
             <route path="user"><user-page /></route>
+            <!--  <route show={!hasAuth} path="/*"><login-page /></route>  -->
         </router>
     </div>
 
@@ -26,6 +27,29 @@
         import route from 'riot-route/lib/tag'
         import './mainstyle'
 
+        
+    /*this.on('route', () => {
+      console.log('now loading...')
+    });*/
+
+    /*    this.updateAuth = () => {
+            const authStorage = localStorage.getItem('hasAuth');
+            this.hide = authStorage !== null && authStorage === "true" ? true : false;
+        };
+
+        this.on('mount', () => {
+            this.updateAuth();
+        });
+
+        this.on('update', () => {
+          
+        });  
+*/
+     /*   this.on('hasAuth', () =>{
+            const storage = localStorage.getItem('Authing');
+            console.log(storage);
+           this.hide = storage !== null && storage === "true" ? true : false;
+        }); */
 
     </script>
 </app>

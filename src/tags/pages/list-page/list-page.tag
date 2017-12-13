@@ -22,13 +22,13 @@
 
         this.onClickAlbum = (e) => {
             const {album} = e.item;
-            console.log(album);
+            //console.log(album);
 
             route('/album/' + album.id + '/')
         };
         this.onClickPost = (e) => {
             const {post} = e.item;
-            console.log(post);
+            //console.log(post);
 
             route('/comment/' + post.id)
         };
